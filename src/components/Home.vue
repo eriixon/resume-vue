@@ -10,7 +10,7 @@
                 Sergey Radkov
             </div>
             <div class="display-2 font-weight-bold white--text text-xs-center">
-                Interactive resume
+                Interactive Resume
             </div>
             <v-btn fab class="mt-5 brown darken-4">
                 <v-icon large>mdi-chevron-double-down</v-icon>
