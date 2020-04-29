@@ -9,10 +9,12 @@
             <div class="display-4 font-weight-black white--text text-xs-center">
                 Sergey Radkov
             </div>
-            <div class="display-2 font-weight-bold white--text text-xs-center">
+            <div
+                class="display-2 font-weight-bold white--text text-xs-center name"
+            >
                 Interactive Resume
             </div>
-            <v-btn fab class="mt-5 brown darken-4">
+            <v-btn fab class="mt-5 brown darken-4 some-button">
                 <v-icon large>mdi-chevron-double-down</v-icon>
             </v-btn>
         </v-layout>
@@ -38,7 +40,33 @@ export default {
     background-size: cover;
     height: 98vh;
 }
-.v-btn--round .v-btn__content .v-icon {
+.some-button {
     color: white;
+}
+.name {
+    margin-bottom: 25vh;
+    margin-top: 5vh;
+}
+.some-button :hover {
+    animation: chevron 5s infinite;
+    animation-direction: inherit;
+}
+
+@keyframes chevron {
+    0% {
+        top: 5px;
+    }
+    25% {
+        top: -5px;
+    }
+    50% {
+        top: 5px;
+    }
+    75% {
+        top: -5px;
+    }
+    100% {
+        top: 5px;
+    }
 }
 </style>
