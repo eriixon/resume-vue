@@ -14,8 +14,10 @@
             >
                 Interactive Resume
             </div>
-            <v-btn fab class="mt-5 brown darken-4 some-button">
-                <v-icon large>mdi-chevron-double-down</v-icon>
+            <v-btn icon color="white">
+                <v-icon @click="$vuetify.goTo('.main-about')"
+                    >mdi-feature-search-outline</v-icon
+                >
             </v-btn>
         </v-layout>
     </v-container>
@@ -40,33 +42,8 @@ export default {
     background-size: cover;
     height: 98vh;
 }
-.some-button {
-    color: white;
-}
 .name {
     margin-bottom: 25vh;
     margin-top: 5vh;
-}
-.some-button :hover {
-    animation: chevron 5s infinite;
-    animation-direction: inherit;
-}
-
-@keyframes chevron {
-    0% {
-        top: 5px;
-    }
-    25% {
-        top: -5px;
-    }
-    50% {
-        top: 5px;
-    }
-    75% {
-        top: -5px;
-    }
-    100% {
-        top: 5px;
-    }
 }
 </style>

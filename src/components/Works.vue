@@ -15,6 +15,8 @@
                                     <v-list-item
                                         v-for="(item, i) in works"
                                         :key="i"
+                                        :href="item.url"
+                                        target="_blank"
                                     >
                                         <v-list-item-content>
                                             <v-col
@@ -25,12 +27,13 @@
                                             >
                                                 <v-card
                                                     class="mx-auto"
-                                                    max-width="200"
+                                                    max-width="150"
+                                                    max-height="100"
                                                 >
                                                     <v-img
                                                         :src="item.logo"
-                                                        height="150"
-                                                        width="150"
+                                                        height="100"
+                                                        width="100"
                                                     ></v-img>
                                                 </v-card>
                                             </v-col>
@@ -63,10 +66,9 @@
                                                         >
                                                     </v-row>
                                                 </v-list-item-subtitle>
-                                                <v-list-item-subtitle
-                                                    class="descrption"
-                                                    v-text="item.description"
-                                                ></v-list-item-subtitle>
+                                                <p class="descrption">
+                                                    {{ item.description }}
+                                                </p>
                                             </v-col>
                                         </v-list-item-content>
                                     </v-list-item>
@@ -106,5 +108,6 @@ export default {
 }
 .descrption {
     margin-top: 3vh;
+    text-align: justify;
 }
 </style>
