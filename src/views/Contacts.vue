@@ -21,7 +21,7 @@
                                     :key="i"
                                     class="soc-btn"
                                 >
-                                    <v-btn icon color="white">
+                                    <v-btn icon color="white" :href="item.url" target="_blank">
                                         <v-icon>{{ item.icon }}</v-icon>
                                     </v-btn>
                                 </v-col>
